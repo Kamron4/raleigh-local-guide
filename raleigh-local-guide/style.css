@@ -1,20 +1,23 @@
+/* ===== RALEIGH LOCAL GUIDE: ORIGINAL GREEN + GOLD STYLE ===== */
+* {
+    box-sizing: border-box;
+}
 
-/* ===== MAIN PAGE DESIGN ===== */
 body {
     font-family: "Trebuchet MS", Arial, sans-serif;
     margin: 0;
-    background-color: #fff8e9;
+    background: #e8eddf;
     color: #293d32;
     line-height: 1.7;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #174c38, #287653, #75a86a);
+    background: linear-gradient(135deg, #123f2d, #216b49 65%, #568b5b);
     color: #ffffff;
     text-align: center;
     padding: 45px 20px 30px;
-    border-bottom: 6px solid #f3c969;
+    border-bottom: 7px solid #e9b949;
 }
 
 header h1 {
@@ -26,10 +29,10 @@ header h1 {
 header p {
     font-size: 18px;
     color: #fff1c7;
-    margin-top: 8px;
+    margin: 8px 0 0;
 }
 
-/* ===== NAVIGATION BAR ===== */
+/* NAVIGATION */
 nav {
     margin-top: 25px;
     display: flex;
@@ -42,64 +45,81 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 10px 18px;
     border-radius: 25px;
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
     background-color: #f3c969;
     color: #174c38;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    outline: 3px solid #fff1c7;
+    outline-offset: 2px;
 }
 
-/* ===== MAIN CONTENT ===== */
+/* MAIN CONTENT */
 main {
     max-width: 1000px;
     margin: 35px auto;
-    padding: 20px;
+    padding: 25px;
 }
 
-h2 {
-    color: #206344;
+main > h2,
+.highlights h2 {
+    color: #174c38;
     font-size: 30px;
-    margin-bottom: 15px;
+    margin: 0 0 22px;
+    padding-bottom: 9px;
+    border-bottom: 3px solid #e2b447;
 }
 
 h3 {
-    color: #206344;
-    font-size: 22px;
+    color: #1d6241;
+    font-size: 23px;
+    margin-top: 0;
 }
 
-/* ===== WELCOME SECTION ===== */
-.welcome {
-    background: linear-gradient(135deg, #ffffff, #e5f2df);
-    padding: 35px;
-    border-radius: 18px;
-    border-left: 7px solid #e9b949;
-    box-shadow: 0 6px 18px rgba(36, 75, 50, 0.10);
-    margin-bottom: 35px;
-}
-
-.welcome p {
+p {
     font-size: 17px;
 }
 
-/* ===== HOMEPAGE CARDS ===== */
+/* HOMEPAGE WELCOME PANEL */
+.welcome {
+    background: linear-gradient(135deg, #fff8e8, #dcebd5);
+    padding: 35px;
+    border-radius: 18px;
+    border-left: 8px solid #e9b949;
+    box-shadow: 0 7px 20px rgba(36, 75, 50, 0.14);
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+.welcome p {
+    font-size: 18px;
+}
+
+/* HOMEPAGE CARDS AND DESTINATION CARDS */
 .cards {
     display: flex;
     gap: 25px;
 }
 
 .card {
-    background: linear-gradient(145deg, #ffffff, #f0f7eb);
+    background: linear-gradient(145deg, #fffaf0, #e6efdf);
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 18px;
-    border: 1px solid #d5e5d1;
-    box-shadow: 0 5px 15px rgba(36, 75, 50, 0.09);
-    transition: 0.3s;
+    border: 1px solid #c7d8bf;
+    border-top: 5px solid #d9ad43;
+    box-shadow: 0 6px 17px rgba(36, 75, 50, 0.13);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cards .card {
@@ -107,12 +127,27 @@ h3 {
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(36, 75, 50, 0.16);
-    border-color: #e9b949;
+    transform: translateY(-4px);
+    box-shadow: 0 11px 24px rgba(36, 75, 50, 0.18);
 }
 
-/* ===== CARD LINKS ===== */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* PHOTOS: KEEP THE WHOLE IMAGE VISIBLE AND RESPONSIVE */
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 12px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(25, 55, 37, 0.16);
+}
+
+/* CARD LINKS */
 .card a {
     display: inline-block;
     background-color: #246744;
@@ -122,46 +157,42 @@ h3 {
     padding: 10px 16px;
     border-radius: 22px;
     margin-top: 8px;
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
-.card a:hover {
+.card a:hover,
+.card a:focus-visible {
     background-color: #e9b949;
     color: #173c2b;
 }
 
-/* ===== SECTION SPACING ===== */
+/* SECTION SPACING */
 .highlights {
     margin-top: 35px;
 }
 
-.highlights h2 {
-    border-bottom: 3px solid #e9b949;
-    padding-bottom: 8px;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-    background: linear-gradient(135deg, #174c38, #287653);
+    background: linear-gradient(135deg, #123f2d, #216b49);
     color: #ffffff;
     text-align: center;
     padding: 22px;
     margin-top: 50px;
-    border-top: 5px solid #f3c969;
+    border-top: 6px solid #e9b949;
 }
 
 footer p {
     margin: 0;
 }
 
-/* ===== MOBILE DESIGN ===== */
+/* MOBILE DESIGN */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 30px;
-    }
-
     header {
         padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
     }
 
     .cards {
@@ -186,7 +217,16 @@ footer p {
         padding: 22px;
     }
 
-    h2 {
+    main > h2,
+    .highlights h2 {
         font-size: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card img {
+        max-width: 100%;
     }
 }
